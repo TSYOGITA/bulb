@@ -134,16 +134,21 @@
   let btext = document.getElementById('bulbdata');
   for(x=1; x<6; x++){
    let bid =document.getElementById('lightid'.concat(x));
+   let vid  = document.getElementById('figcap'.concat(x));
    console.log(bid.src);
 
    if(bid.src.match('th')){
     bid.src="oh.jfif";
     btext.innerHTML = "Light OFF";
     btext.style.color = "black";
+    vid.innerHTML="Lights OFF";
+    vid.style.backgroundColor = "red";
    }else{
     bid.src="th.jfif";
     btext.innerHTML = "Light ON";
     btext.style.color = "red";
+    vid.innerHTML = "Lights ON";
+    vid.style.backgroundColor="yellow";
    }
   }
  }
